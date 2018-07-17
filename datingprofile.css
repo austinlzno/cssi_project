@@ -1,0 +1,59 @@
+body {
+  background-color: white;
+}
+
+#profilepicture img{
+  border-radius: 50%;
+  position: fixed;
+}
+.profilepicture {
+background-position: center;
+
+}
+#header {
+  color: white;
+  background-color: #77e5ac;
+  font-size: 20px;
+  height: 200px;
+  margin: 0px;
+  padding-top: 3%;
+  text-align: center;
+  width: 100%;
+}
+
+#link {
+background-color: black;
+height: 50px;
+text-align: center;
+font-family: Roboto Condensed;
+
+}
+
+.link {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+}
+
+.headertext {
+  font-family: Gaegu;
+}
+
+#extrapictures {
+font-family: Roboto Condensed;
+font-size: 40px;
+font-weight: bold;
+text-align: center;
+
+}
+
+#extrapictures img {
+  height: 150px;
+  margin-left: 10%;
+  margin-right: 10%;
+
+
+}

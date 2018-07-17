@@ -33,6 +33,9 @@ body {
   background-color: #Febc1f;
   height: 50px;
   text-align: center;
+  border: 15px dashed red ;
+
+
 }
 
 .link {
@@ -42,4 +45,50 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 2%;
+}
+#students img {
+  border-radius: 30px;
+  height: 150px;
+
+
+}
+
+#students {
+
+  background-color: green;
+}
+
+.headertext {
+  font-family: 'Knewave'
+
+
+}
+
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+
+}
+
+.extrapics {
+  background-color: blue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+#extrapictures img{
+  border-radius: 30px;
+  height: 150px;
+}
+
+.turtle {
+  display: block;
+  height: 5px;
+  width: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
