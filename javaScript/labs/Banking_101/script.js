@@ -15,21 +15,27 @@
 let customer_name;
 let balance;
 
-function openAccount(name){
-  balance = 0;
-  // Set the value for customer_name equal to name below
-
-  return //write the statment you need to return here
+function openAccount(name, startingBalance=0, logged_in){
+  balance = startingBalance;
+  customer_name = name;
+  console.log(customer_name);
+  return  `${name} has opened a new account with a balance of $${startingBalance}`;
 }
 
-function deposit(value){
-  // update the value of balance
-  //return the correct statement
+function deposit(value)
+{
+balance = value + balance;
+  console.log(balance);
+  return `${customer_name} has deposited ${value}. ${customer_name}'s total balance is ${balance}`;
+
 }
 
-function withdraw(/*argument here*/){
-  //update the value of balance
-  //return the correct statement
+
+function withdraw(value){
+  balance = balance - value;
+  console.log(balance);
+return `${customer_name} has withdrawn ${value}. ${customer_name} has ${balance} remaining`;
+
 }
 
 // Write your script below

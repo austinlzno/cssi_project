@@ -13,15 +13,31 @@
 // limitations under the License.
 
 let amusementParks = ["Disney World", "Hershey Park", "Six Flags", "Dorney Park", "Sea World"];
+
+amusementParks.forEach ((name) => {
+  console.log(name.toUpperCase() + 'is a great amusement park.');
+
+})
 //Complete task one below
 
 
 
 
 let rollerCoasters = ["Big Thunder Mountain Railroad","Splash Mountain","Space Mountain", "Expedition Everest","The Twilight Zone Tower of Terror"];
+for (let i = 0; i < rollerCoasters.length; i++){
+  console.log(rollerCoasters[i]);
+ if (rollerCoasters[i] == 'Space Mountain'){
+   break;
+ }
+}
 //Complete task two below
 
 
 
 let height = 6;
 //Complete task three below
+while (height > 4){
+  console.log ('Next Customer! ' + height);
+  height--;
+  height = Math.floor(Math.random() * 5) +3;
+}
