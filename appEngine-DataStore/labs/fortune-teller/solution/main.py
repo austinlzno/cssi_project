@@ -34,7 +34,7 @@ import webapp2
 import os
 import jinja2
 import random
-
+from movie import Movie
 
 def get_fortune():
     fortune_list=['Tomorrow, you will meet a life-changing new friend.',
@@ -67,8 +67,31 @@ class FortuneHandler(webapp2.RequestHandler):
         #astro_sign = request.form.get('user_astrological_sign')
         self.response.write(end_template.render(my_dict))
 
+class DataDemoHandler (webapp2.RequestHandler):
+    def post(self):
+        mov_title = self.request.get('movie_title')
+        runtime = int(self.request.get('movie_runtime'))
+        user_rating= float(self.request.get('movie_rating'))
+        my_movie = Movie(title= title, runtime_min = runtime, rating = rating)
 
+class TestDataHandler(webapp2.RequestHandler):
+    def get(self):
+        movie_template = jinja_current_directory.get_template('/data_demo.html')
+        self.response.write(movie_template.render())
+
+    def post(self):
+        mov_title = self.request.get('movie_title')
+        runtime = int(self.request.get('movie_runtime'))
+        user_rating= float(self.request.get('movie_rating'))
+        my_movie = Movie(title= mov_title, runtime = runtime, rating = user_rating)
+        my_movie.put()
+
+    q = Movie.all()
+    result = q.get
+    q=Movie.all(keys_only=True)
+    self.response.write(q)
 
 app = webapp2.WSGIApplication([
-    ('/', FortuneHandler)
+('/fortune', FortuneHandler),
+('/dataDemo', TestDataHandler),
 ], debug=True)

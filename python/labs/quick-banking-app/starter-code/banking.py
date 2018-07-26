@@ -17,4 +17,6 @@
 # Replace "pass" with your code
 
 class BankAccount(object):
-    pass
+    def __init__(self, label, balance):
+        self.label
+        self.balance

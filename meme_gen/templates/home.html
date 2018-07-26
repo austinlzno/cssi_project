@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is the title</title>
+    <head>
+    <body>
+      <h1>Meme Generator</h1>
+      <h2>Welcome to my meme generator</h2>
+
+      <form method=POST action = '/meme_meme'>
+        Caption Meme:<br>
+        <input type = 'text'name = 'user-first-ln' value= 'First line of meme'>
+
+        <select name = 'meme-type2'>
+          <option value = 'college-grad'>Happy college grad</option>
+          <option value = 'thinking-ape'> Deep thought monkey</option>
+          <option value = 'charlie-finger'>Charlie Bit My Finger</option>
+          <option value = 'jazz'>Jazz Music Stops</option>
+        </select></br>
+        <input type ='submit' value= 'Go!'>
+
+        <br>
+        Caption Meme: <br>
+        <input type = 'text' name = 'user-second-ln' value='Second line of meme'>
+        <!-- <img src = 'http://www.humorandmemes.com/wp-content/uploads/2017/07/im-not-anti-social.-im-selectively-social.jpg'> -->
+        <select name='meme-type'>
+
+          {% for key,value in meme_names.items() %}
+            <option value ={{key}}>{{value}}</option>
+              <!-- <option value='{{meme}}'>{{meme}}</option> -->
+          {% endfor %}
+
+        </select><br>
+      </form>
+
+    </body>
+
+</html>

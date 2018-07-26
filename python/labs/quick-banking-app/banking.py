@@ -1,3 +1,5 @@
+#!/usr/bin/python
+#
 # Copyright 2018 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,28 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-application: fortune-teller
-version: 1
-runtime: python27
-api_version: 1
-threadsafe: yes
+# Replace "pass" with your code
 
-handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+class BankAccount(object):
+    def __init__(self, label, balance):
+        self.label = label
+        self.balance = balance
 
-- url: /my-style-dir
-  static_dir: my-style-dir
-
-- url: /my-images-dir
-  static_dir: my-images-dir
-
-- url: .*
-  script: main.app
-
-libraries:
-- name: webapp2
-  version: "2.5.2"
-- name: jinja2
-  version: latest
+def __str__(self):
+    print ('Label: test acc \n Balance: 1000'
+    .format(label=self.label , balance=self.balance))
+    return
